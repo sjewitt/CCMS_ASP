@@ -1,0 +1,6 @@
+C:\Dev\CCMS_ASP_DB\html parser\HAP2.0\HtmlAgilityPack\bin\Debug\HtmlAgilityPack.dll
+C:\Dev\CCMS_ASP_DB\html parser\HAP2.0\HtmlAgilityPack\bin\Debug\HtmlAgilityPack.pdb
+C:\Dev\CCMS_ASP_DB\html parser\HAP2.0\HtmlAgilityPack\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\CCMS_ASP_DB\html parser\HAP2.0\HtmlAgilityPack\obj\Debug\HtmlAgilityPack.license.txt
+C:\Dev\CCMS_ASP_DB\html parser\HAP2.0\HtmlAgilityPack\obj\Debug\HtmlAgilityPack.dll
+C:\Dev\CCMS_ASP_DB\html parser\HAP2.0\HtmlAgilityPack\obj\Debug\HtmlAgilityPack.pdb

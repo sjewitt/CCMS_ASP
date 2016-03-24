@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Class Content</title>
+  </head>
+  <body>
+    <h1>Class Node</h1>
+        <h2>Summary</h2>
+        <p>
+        Abstraction of a position in the content hierarchy. Requires a valid
+        Node ID in the constructor.
+        </p>
+        <h3>Constructor</h3>
+    <ul>
+      <li><code>Node(Integer NodeID)</code></li>
+    </ul>
+    <h3>Instance Properties</h3>
+    <ul>
+      <li><code>id</code> - Integer Node ID.</li>
+      <li><code>parentId</code> - Integer Direct hierarchical ancestor Node ID. Zero if root node.</li>
+      <li><code>pageId</code> - Integer ID of referenced <a href="page.htm" title="Page">Page</a> object.</li>
+      <li><code>hasChildren</code> - Boolean does this Node have direct hierarchical descendents?</li>
+      <li><code>level</code> - Integer hierarchical level, counting from root level as zero.</li>
+      <li><code>layoutId</code> - Integer ID of Layout object corresponding to this hierarchical position. Note, this property may be inherited from a direct ancestor node.</li>
+      <li><code>layoutInherited</code> - Boolean indicates whether the layout ID is inherited (TRUE) or is a direct property of this Node.</li>
+      <li><code>isCurrentNode</code> - Boolean. Specifically in the context of an array of Nodes and navigation logic: this value is TRUE when the node in an array of 
+      nodes is the one being rendered to the browser. Other nodes <code>isCurrentNode</code> property in the array have a FALSE value.</li>
+    </ul>
+    <h3>Instance Methods</h3>
+    <ul>
+      <li><code>getChildren</code> - Retrieve an array of Nodes represending the direct descendents of the current Node.</li>
+      <li><code>getParent</code> - Retrieve the Node direct parent of the current Node. TODO: Undefined if current Node is the root node.
+      <li><code>getPage</code> - Retrieve the <a href="page.htm" title="Page">Page</a> object referenced by this Node.
+      <li><code>getLayoutId</code> - Retrieve the Integer Layout ID associated with this Node (TODO: Check logic!) 
+    </ul>
+  </body>
+</html>

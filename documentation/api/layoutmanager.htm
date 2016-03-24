@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Class Content</title>
+  </head>
+  <body>
+    <h1>Class LayoutManager</h1>
+    <h2>Summary</h2>
+    <p>
+    TODO: LOGIC, GETTERS/SETTERS. This needs to be sorted out.
+    </p>
+    <p>
+      Used internally by core engine object <a href="engine.htm" title="CCMS engine">ccms.asp</a>. Factory class for managing <a href="layout.htm" title="Layout">Layout</a> objects.
+    </p>
+    <h3>Constructor</h3>
+    <ul>
+      <li><code>LayoutManager()</code></li>
+    </ul>
+    <h3>Instance Properties</h3>
+    <ul>
+      <li><code>layoutId</code> - Integer ID of current Layout object [UNUSED!]</li>
+      <li><code>layout</code> - <a href="layout.htm" title="Layout">Layout</a> current Layout object. [UNUSED!]</li>
+    </ul>
+    <h3>Instance Methods</h3>
+    <p>Note: Return values from these methods are used to render the output.</p>
+    <ul>
+      <li><code>getLayoutId(node)</code> - Integer layout ID. Retrieves the layout ID for the specified <a href="node.htm" title="Node">Node</a> object</li>
+      <li><code>getLayout(layoutId)</code> - <a href="layout.htm" title="Layout">Layout</a>. Retrieve specified Layout object for supplied Integer layout ID. </li>
+      <li><code>getAllLayouts</code> - Retrieves the currently defined list array of <a href="layout.htm" title="Layout">Layout</a> objects</li>
+      <li><code>getTemplateSlots(template)</code> - Retrieve a complex object defining slots for supplied template file:
+      <code>
+      <xmp>
+      obj{
+        slots   = [{CMS_CONTENT_n},{CMS_CONTENT_n+1},...],
+        source  = [file source]
+      }
+      </xmp>
+      </code>
+      
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+bin\Debug\Html2Rss.exe
+bin\Debug\Html2Rss.pdb
+bin\Debug\\HtmlAgilityPack.dll
+bin\Debug\\HtmlAgilityPack.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Html2Rss.exe
+obj\Debug\Html2Rss.pdb
+bin\Release\Html2Rss.exe
+bin\Release\Html2Rss.pdb
+bin\Release\\HtmlAgilityPack.dll
+bin\Release\\HtmlAgilityPack.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Html2Rss.exe
+obj\Release\Html2Rss.pdb

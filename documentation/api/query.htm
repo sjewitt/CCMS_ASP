@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Class Content</title>
+  </head>
+  <body>
+    <h1>Class Query</h1>
+    <h2>Summary</h2>
+    <p>
+    Abstraction of SQL queries. 
+    </p>
+    <h3>Constructor</h3>
+    <ul>
+      <li><code>Query();</code></li>
+      <li><code>Query(String SQL);</code></li>
+    </ul>
+    <h3>Class methods</h3>
+    <ul>
+      <li><code>getConnectionString();</code> Returns the default ADODB database connection string.</li>
+    </ul>
+    
+    <h3>Instance Properties</h3>
+    <p>Read-only properties, inherited from the configuration file (LINK TODO).</p>
+    <ul>
+      <li><code>dataSource</code> String Data source name. Default value is inherited from the configuration file (LINK TODO), connection parameter to alternate database may be specified.</li>
+      <li><code>user</code> String Database user. Default value is inherited from the configuration file (LINK TODO), connection parameter to alternate database may be specified.</li>
+      <li><code>password</code> String Database user password. Default value is inherited from the configuration file (LINK TODO), connection parameter to alternate database may be specified.</li>
+      <li><code>sql</code> String SQL statement to execute. Must explicitly name the fields to retrieve otherwise <code>resultObject</code> will
+       not be populated correctly.</li>
+      <li><code>errorMessage</code> String database etc. exception message.</li>
+      <li><code>resultObject</code> Array of Objects. Is an abstraction of a resultset. Array length is length of recordset, each element is
+       an object whose properties are the selected fields and corresponding values the select result values.</li>
+    </ul>
+    
+    <h3>Instance Methods</h3>
+    <ul>
+      <li><code>close();</code> Closes the currect database connection.</li>
+      <li><code>closeRecordset();</code> Closes the currect recordset.</li>
+      <li><code>execute();</code> Populates <code>resultObject</code> array. Each element is an object of property/value pairs. Properties correspond 
+      to the database fields and values to the corresponding database field values. An example from the users table:<br />
+      The SQL query <code>select * from users;</code> results in:
+      
+      <pre><code>>0 (object) - [object Object]
+__>id (number) - 1
+__>login (string) - admin
+__>password (string) - password
+__>fullname (string) - Administrator
+__>email (string) - silas@thecoven.co.uk
+__>active (boolean) - true
+__>permissions (number) - 1
+>1 (object) - [object Object]
+__>id (number) - 2
+__>login (string) - bob
+__>password (string) - password
+__>fullname (string) - Bob t Builder
+__>email (string) - bob@tracktorfaktory.net
+__>active (boolean) - true
+__>permissions (number) - 60</code></pre>  
+      </li>
+      
+      <li><code>setQuery(String SQL)</code> Sets a new SQL query to be executed.</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+CCMS:
+
+TODO:
+
+ - Add functionality to the link page to also retrieve links to all non-images in the /images folder
+ - blurb to teh upload box

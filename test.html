@@ -1,0 +1,101 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  
+  <link rel="stylesheet" href="/ccms_asp/editor/styles/editstyles.css" type="text/css" />
+<script type="text/javascript" src="/ccms_asp/editor/scripts/editscripts.js"></script>
+
+  
+  <script type="text/javascript">
+  
+  //alert(window.opener.location + ", " + document.location);
+  
+  
+  //SORT THIS OUT!
+  function dosubmit(){  
+    var submit = false;
+    var msg = "X";
+    
+    //get list of radiobuttons, check that one is selected:
+    var radiobuttons = document.updatelayout.nodeid;
+    
+    /*
+    If there is only one item (ie root) then we do not have an
+    ARRAY, so create one:
+    */
+    if(radiobuttons.length == undefined){
+      var elem = radiobuttons;
+      radiobuttons = new Array();
+      radiobuttons.push(elem);
+    }
+    
+    alert(typeof(radiobuttons))
+    
+    //var x = "";
+    for(var a=0;a<radiobuttons.length;a++){
+      //x+=radiobuttons[a].checked+"\n"
+      if(radiobuttons[a].checked == true){
+        submit = true;  
+      }
+      msg = "Please select a parent to proceed."
+    }
+    
+    if(submit){
+      if(confirm("Add this page to viewtree?")){
+        //submit the form:
+        document.updatelayout.submit();
+      }
+    }
+    else{
+      alert(msg);
+    }
+  }
+  </script>
+
+  
+  <title>Add page to viewtree</title>
+  </head>
+  <body>
+    
+
+    <div id="container">
+      <div id="editor_content">
+       <div style="height:130px;">
+          <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtree100x130.jpg" alt="Create page" />
+          <h1>Add page to viewtree</h1>
+
+          <p>
+
+      Place page 'section1' (id 2) in viewtree: Select parent node. (Currently this only supports adding as a 
+      CHILD, and does not yet support sibling positioning. This will come...)
+
+          </p>
+        </div>
+    
+        <form name="updatelayout" action="/ccms_asp/editor/addtoviewtree.asp?pageid=2" method="post">
+          <input type="hidden" name="pageid" value="2" />
+          <input type="hidden" name="action" value="add" />
+          <div id="previewpanel" style="border:1px solid black;padding:5px;width:655px;height:300px;overflow:auto;">
+          <table>
+
+<tr><td>&nbsp;<input type="radio" name="nodeid" value="1" / >index (1, 1)</td></tr>
+<tr><td>&nbsp;<input type="radio" name="nodeid" value="2" / >index (1, 1)</td></tr>
+
+          </table>
+      </div>
+
+      <input type="button" name="add" value="Add" onclick="dosubmit();" />
+
+      </form>
+          <p>
+        [<a href="#" onclick="javascript:window.close();">close</a>]
+        </p>
+
+      </div>
+    </div>
+  </body>
+</html>

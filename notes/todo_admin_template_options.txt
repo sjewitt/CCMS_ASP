@@ -1,0 +1,6 @@
+Add template option to the ADMIN section:
+
+ - Read the templates dir, *.tmpl, and compare to the DB list.
+  -> Options to add/remove templates
+ - Upload a new template (either re-use the binary upload or write a C# aspx page)
+ - delete a template (CARE!!)

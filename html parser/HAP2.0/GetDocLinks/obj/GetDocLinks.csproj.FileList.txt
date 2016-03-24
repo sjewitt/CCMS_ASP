@@ -1,0 +1,14 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\GetDocLinks.exe
+bin\Debug\GetDocLinks.pdb
+bin\Debug\\HtmlAgilityPack.dll
+bin\Debug\\HtmlAgilityPack.pdb
+obj\Debug\GetDocLinks.exe
+obj\Debug\GetDocLinks.pdb
+bin\Release\GetDocLinks.exe
+bin\Release\GetDocLinks.pdb
+bin\Release\\HtmlAgilityPack.dll
+bin\Release\\HtmlAgilityPack.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\GetDocLinks.exe
+obj\Release\GetDocLinks.pdb

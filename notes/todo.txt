@@ -1,0 +1,52 @@
+10:42 28/08/2009
+----------------
+CCMS ASP TODO:
+ - Instance delete
+ - doc upload to correct directory
+ - removeviewtreebranch
+ - 
+
+11:34 02/09/2009
+----------------
+
+updated config.asp:
+ - added another code prop (linktext)
+
+
+LH image: 69px × 70px
+
+<div class="contentheader"><div class="thumbheader">Mandy</div><img src="../images/mandy_lge.jpg"></div>
+
+18:47 05/09/2009
+----------------
+THERE IS NO OPTION TO EDIT UN-ASSIGNED CONTENT!!!
+FIX THIS!!!!!!!!!
+
+
+06/09/2009
+----------
+ - Add admin function to create content types (eg news)
+ - Add editor function to search/edit ALL content - currently, only the assigned content can be edited after it has been created.
+
+
+14:46 05/06/2010
+----------------
+custom metadata associated with VIEWTREE - a model
+custom metadata associated with PAGES - a model
+custom metadata associated with CONTENT - a model
+
+popup sizing - 
+debug output - 
+
+
+Add template option to the ADMIN section:
+
+ - Read the templates dir, *.tmpl, and compare to the DB list.
+  -> Options to add/remove templates
+ - Upload a new template (either re-use the binary upload or write a C# aspx page)
+ - delete a template (CARE!!)
+
+
+21:13 27/07/2010
+----------------
+Page/content properties display - include created date, num versions, last updated date etc.

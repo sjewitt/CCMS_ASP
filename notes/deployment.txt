@@ -1,0 +1,6 @@
+
+
+ - create SQL scripts to create the tables
+   -> add defaults to USERS (admin)
+   -> add defaults to PAGE
+   -> INSERT into page_content_ref where page_id= the above ID and parent = 0

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Class Content</title>
+  </head>
+  <body>
+    <h1>Class Content</h1>
+    <h2>Summary</h2>
+    <h3>Constructor</h3>
+    <ul>
+      <li><code>Content(Integer contentId)</code></li>
+    </ul>
+
+    <h3>Instance Properties</h3>
+    <ul>
+      <li><code>authGroup</code> Integer indicating authorisation group.</li>
+      <li><code>createdDate</code> Date of creation.</li>
+      <li><code>createdUser</code> Integer created user ID.</li>
+      <li><code>id</code> Integer Content ID</li>
+      <li><code>updatedDate</code> Date of last update (corresponds to associated <a title="ContentInstance CreatedDate" href="contentinstance.htm#createddate">ContentInstance createdDate</a>)</li>
+      <li><code>updatedUser</code> Integer updated user ID</li>
+    </ul>
+    <h3>Instance Methods</h3>
+    <ul>
+      <li><code>getInstanceList()</code> Returns an array of <code><a href="contentinstance.htm" title="ContentInstance">ContentInstance</a></code> objects associated
+      with this Content. A valid Content ID must be used to construct the instance.</li>
+      <li><code>getInstance([instanceId])</code> Return the specified <code><a href="contentinstance.htm" title="ContentInstance">ContentInstance</a></code>.</li>
+      <li><code>getActiveInstance()</code> Return the most recent <code><a href="state.htm" title="State.ACTIVE">ACTIVE</a></code> instance.</li>
+      <li><code>getCreatedUser()</code> Return the Content created <code><a href="user.htm" title="User">User</a></code>.</li>
+      <li><code>getUpdatedUser()</code> Return the Content updated <code><a href="user.htm" title="User">User</a></code>.</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Class Content</title>
+  </head>
+  <body>
+    <h1>Class Page</h1>
+        <h2>Summary</h2>
+        <p>
+          Abstraction of a piece of content and associated metadata. This is independant 
+          of the layout and the position in the content hierarchy. An instance of this class is essentially a complex object:
+          <code>
+          <xmp>
+          [TODO]
+          </xmp>
+          </code> 
+        </p>
+    <h3>Constructor</h3>
+    <ul>
+      <li><code>Page(Integer PageId)</code></li>
+    </ul>
+    <h3>Instance Properties</h3>
+    <ul>
+      <li><code>id</code> - Integer ID of current Page object</li>
+      <li><code>exists</code> - Boolean does page specified by ID in the constructor actually exist?</li>
+      <li><code>linkText</code>(*) - String short text describing content. Default use is for text of HREFs.</li>
+      <li><code>title</code>(*) - String short text describing content. Default use is for the browser window title.</li>
+      <li><code>description</code>(*) - String short text describing content. Default use is for HTML metatext DESCRIPTION tag value.</li>
+      <li><code>keywords</code>(*)  - String short text describing content. Default use is as comma-separated word list as HTML metatext KEYWORDS tag value.</li>
+      <li><code>content</code> - Array of referenced <a href="content.htm" title="Content">Content</a> objects. Populated by <code>getContent()</code> method, described below.</li>
+      <li><code>createdUser</code> - Integer created user ID.</li>
+      <li><code>layoutId</code> - Integer Layout ID.</li>
+    </ul>
+    <h3>Instance Methods</h3>
+    <ul>
+      <li><code>getContent</code> - Populate this object's content array.</li>
+      <li><code>update</code> - Editing method. Update the core properties(*) of this Page object.</li>
+    </ul>
+  </body>
+</html>

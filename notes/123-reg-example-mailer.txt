@@ -1,0 +1,25 @@
+<%
+sch = "http://schemas.microsoft.com/cdo/configuration/"
+
+Set cdoConfig = CreateObject("CDO.Configuration")
+
+With cdoConfig.Fields
+.Item(sch & "sendusing") = 2 ' cdoSendUsingPort
+.Item(sch & "smtpserver") = "intmail"
+.update
+End With
+
+Set cdoMessage = CreateObject("CDO.Message")
+
+With cdoMessage
+Set .Configuration = cdoConfig
+.From = "mail-address"
+.To = "mail-address"
+.Subject = "13.31"
+.TextBody = "This is the Email Body"
+.Send
+End With
+
+Set cdoMessage = Nothing
+Set cdoConfig = Nothing
+%>

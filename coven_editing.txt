@@ -1,0 +1,6 @@
+coven image dimensions:
+-----------------------
+
+xxx_lge.jpg = 110x120
+xxx_home.jpg = 90x90
+xxx_sml.jpg = 70x70
