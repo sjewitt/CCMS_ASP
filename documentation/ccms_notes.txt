@@ -1,0 +1,1 @@
+do editor to open one tag at a time. login triggers edit links against each editable content and opens the appropriate XML file/tag.
