@@ -17,16 +17,12 @@ function Query(sql){
   Query.prototype.connection.open(Query.getConnectionString());
   Query.prototype.recordset    = Server.CreateObject("ADODB.Recordset");
   
-  /*
-  constructor. Optionally pass in SQL query
-  */
+  /* constructor. Optionally pass in SQL query */
   if(sql){ 
     this.sql = sql;
   }
-/*
-NOT SURE ABOUT THIS...
-
-*/
+  
+/* NOT SURE ABOUT THIS... */
   Query.prototype.insert = function(sql){
     try{
       this.sql = sql;
@@ -37,15 +33,14 @@ NOT SURE ABOUT THIS...
     }
   }
 
-    Query.prototype.del = function(sql){
+  Query.prototype.del = function(sql){
       this.insert(sql); //its actually the same call...
   }
 
-  /*
-  Retrieve a recordset and abstract to an Object:
-   - This method sets the resultObject property.
-  */
+  /* Retrieve a recordset and abstract to an Object:
+   - This method sets the resultObject property. */
   Query.prototype.execute = function(){
+	// Response.Write(this.sql);
     try{
       var out = new Array();
       this.resultObject = new Array();
@@ -102,6 +97,8 @@ Query.getConnectionString = function(){
     connStr         += ";Database=" + DBNAME;
     connStr         += ";Uid="      + DBUSER;
     connStr         += ";Pwd="      + DBPASSWORD;
+	//Response.Write(connStr);
+	//Response.Write("<br />");
     return connStr;
   }
   catch(e){

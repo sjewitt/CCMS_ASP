@@ -24,20 +24,18 @@ if(currentUser.permissions & Permissions.ADMINISTRATOR){
         case 1:
           msg = "Edit source";
           
-          /*
-          Handle source save:
-          */
+          /* Handle source save: */
           if(new String(Request.Form("update")) == "true")
           {
-            Response.Write("UPDATE = TRUE");
+           // Response.Write("UPDATE = TRUE");
             //write the file back to FS:
             var fs = Server.CreateObject("Scripting.FileSystemObject");
             if(fs)
             {
               //Response.Write(fs);
               var absolutePath = Server.MapPath("/ccms_asp/templates/" + currLayout.fileName);
-              Response.Write(absolutePath);
-              Response.Write(Request.Form("layoutsrc"));
+           //   Response.Write(absolutePath);
+          //    Response.Write(Request.Form("layoutsrc"));
               var fContents = "";
               //var objF;
               var ts;
@@ -46,7 +44,7 @@ if(currentUser.permissions & Permissions.ADMINISTRATOR){
               ts = fs.CreateTextFile(absolutePath,true);
 
               var res = ts.write(new String(Request.Form("layoutsrc")));
-              Response.Write(res); 
+         //     Response.Write(res); 
  
               //ensure textstream is closed:
               ts.close();
@@ -54,7 +52,7 @@ if(currentUser.permissions & Permissions.ADMINISTRATOR){
               fs = null;
               
               //and redirect:
-              Response.Redirect( Request.ServerVariables("SCRIPT_NAME") + "?layout=" + Request.QueryString('layout') + "&doaction=" + Request.QueryString('doaction'));
+              //Response.Redirect( Request.ServerVariables("SCRIPT_NAME") + "?layout=" + Request.QueryString('layout') + "&doaction=" + Request.QueryString('doaction'));
             }
             else
             {
@@ -80,7 +78,7 @@ if(currentUser.permissions & Permissions.ADMINISTRATOR){
               isVisible = true;
             }
             var res = layoutManager.setAvailability(currLayout,isVisible);
-            Response.Write("res: " + res);
+           // Response.Write("res: " + res);
             if(res)
             {
               output = "<p>Availability of template '" + currLayout.fileName + "'' set to '" + currLayout.active + "'</p>";
@@ -115,10 +113,10 @@ if(currentUser.permissions & Permissions.ADMINISTRATOR){
           }
         break;
         case 3:
-          msg = "Delete template";
+          output = "Delete template [NOT IMPLEMENTED YET]";
         break;
         case 4:
-          msg = "Add new template";
+          output = "Add new template [NOT IMPLEMENTED YET]";
         break;
       } 
     }

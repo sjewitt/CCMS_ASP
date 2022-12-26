@@ -1,7 +1,10 @@
 <%
 function getDemoTopNav(startNode,currentNode)
 {
-  
+  Response.Write(startNode);
+  for(prop in startNode){
+	// Response.Write(prop +'=' + startNode[prop] + '<br />');
+  }
   try
   {
     var out = "<ul class=\"box\">";

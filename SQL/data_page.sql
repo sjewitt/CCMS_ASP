@@ -1,6 +1,34 @@
-INSERT INTO [page] ([id],[state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(10,1,'about','about','About Us','bob','',NULL,1,'Jul  9 2009 10:09:27:863PM',1,NULL)
-INSERT INTO [page] ([id],[state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(11,1,'2','2','two',NULL,NULL,NULL,1,NULL,NULL,NULL)
-INSERT INTO [page] ([id],[state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(12,1,'sect1_1','Gardens','S1.1','','',NULL,1,'Jul  9 2009  3:13:24:750PM',1,NULL)
+INSERT INTO [page] (
+--[id],
+[state],
+[name],
+[linktext],
+[title],
+[description],
+[keywords],
+[created_date],
+[created_user],
+[updated_date],
+[updated_user],
+[layout_id])
+
+VALUES(
+--10,
+1,
+'about',
+'about',
+'About Us',
+'bob',
+'',
+NULL,
+1,
+'Jul  9 2009 10:09:27:863PM',
+1,
+NULL)
+
+
+INSERT INTO [page] ([state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id]) VALUES(1,'2','2','two',NULL,NULL,NULL,1,NULL,NULL,NULL)
+INSERT INTO [page] ([state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(1,'sect1_1','Gardens','S1.1','','',NULL,1,'Jul  9 2009  3:13:24:750PM',1,NULL)
 INSERT INTO [page] ([id],[state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(13,1,'1_2','animals','S1.2','','',NULL,1,NULL,NULL,NULL)
 INSERT INTO [page] ([id],[state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(14,1,'ONE_THREE','A Garden','S1.3','some more crap','a,longer,key,word,list',NULL,1,'Jul  9 2009 10:09:51:690PM',1,NULL)
 INSERT INTO [page] ([id],[state],[name],[linktext],[title],[description],[keywords],[created_date],[created_user],[updated_date],[updated_user],[layout_id])VALUES(15,1,'visit','visit','Visit Us','aa','abcde',NULL,1,'Jul  9 2009 10:09:51:690PM',1,NULL)

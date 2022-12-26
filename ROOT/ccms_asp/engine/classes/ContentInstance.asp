@@ -37,18 +37,12 @@ function ContentInstance(id){
   this.instanceNum  = parseInt(recordset("version_id"));
   this.updatedDate  = new Date(recordset("updated_date"));
     
-    
   recordset.close();
   recordset = null;
   connection.close(); 
   connection = null
   
-  
-  
-  
-  /*
-  I need to do something here around differentiating between characters in body copy and inside HTML tag attributes
-  */
+  /* I need to do something here around differentiating between characters in body copy and inside HTML tag attributes */
   ContentInstance.prototype.setContent = function(content){
     try{
       content = content+"";       //why does toString() fail?

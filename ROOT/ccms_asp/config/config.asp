@@ -3,10 +3,10 @@
 basic database connection:
 *********************************************************************/
 var DBDRIVER    = "{SQL Server}";
-var DBSERVER    = "LOCALHOST";       //ESCAPE the forwardslash!
+var DBSERVER    = "localhost\\SQLEXPRESS";
 var DBNAME      = "ccms";
-var DBUSER      = "sa";
-var DBPASSWORD  = "livelink";
+var DBUSER      = "ccms";
+var DBPASSWORD  = "password";
 
 
 /*********************************************************************

@@ -24,6 +24,7 @@ if(currentUser){
     msg = "Creating new content."
     
     //build a date from passed to/from fields. Expects yyyy-mm-dd:
+	//pageid=&slotid=&execute=ok&name=test&description=test&type=1&validfrom=2022-12-26&validto=
     var dateFrom = null;
     var dateTo = null;
     if(Request.Form('validfrom')!= null && (new String(Request.Form('validfrom'))) != "")

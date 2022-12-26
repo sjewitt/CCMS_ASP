@@ -1,4 +1,4 @@
-INSERT INTO [viewtree] ([id],[page_id],[parent_id],[layout_id])VALUES(9,21,0,4)
+INSERT INTO [viewtree] ([page_id],[parent_id],[layout_id])VALUES(1,0,1)
 INSERT INTO [viewtree] ([id],[page_id],[parent_id],[layout_id])VALUES(16,10,9,7)
 INSERT INTO [viewtree] ([id],[page_id],[parent_id],[layout_id])VALUES(17,11,24,NULL)
 INSERT INTO [viewtree] ([id],[page_id],[parent_id],[layout_id])VALUES(18,15,9,5)

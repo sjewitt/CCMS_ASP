@@ -14,8 +14,8 @@ updatedDate  date
 Other properties are mapped from the associated objects:
 */
 function Content(id){
-  //this.logger                = log4CCMS.init();
-  //this.name                  = "Content";
+  this.logger                = log4CCMS.init();
+  this.name                  = "Content";
   this.description           = "";
   this.id                    = null;
   this.authGroup             = 0;
@@ -25,7 +25,6 @@ function Content(id){
   this.updatedDate           = new Date();
   this.validFrom             = null;
   this.validTo               = null;
-  //this.contentInstanceArray  = new Array();
 
   /*
   'constructor'.
@@ -40,14 +39,17 @@ function Content(id){
       
       //populate the CORE content properties (Name, ID, authGroup, createdDate,updatedDate)
       //(TODO: Check for multiple items/zero items.)
+	  var countSql = "select count(*) as count from content where id=" + this.id;
+	  res = connection.execute(countSql);
+	  
       var contentSql = "select name,description,created_date,created_user,updated_date,updated_user,auth_group,content_type,start_date,end_date from content where id=" + this.id;
-      recordset = connection.execute(contentSql);
+	  recordset = connection.execute(contentSql);
 
       //populate the values:
-      if(recordset.length != undefined)
-      {
-        this.name         = new String(recordset("name"));
-        //if(new String(recordset("description")) != "null") 
+      if(res('count') > 0)
+	  {
+		/** care with instantiating a String() with a null... */
+		this.name         = new String(recordset("name"));
         this.description  = new String(recordset("description"));
         this.createdDate  = new Date(recordset("created_date"));
         this.createdUser  = parseInt(recordset("created_user"));
@@ -55,11 +57,12 @@ function Content(id){
         this.updatedUser  = parseInt(recordset("updated_user"));
         this.authGroup    = parseInt(recordset("auth_group"));
         this.contentType  = parseInt(recordset("content_type"));
-        if(new String(recordset("start_date")) != "null") this.validFrom    = new Date(recordset("start_date"));
-        if(new String(recordset("end_date")) != "null") this.validTo      = new Date(recordset("end_date"));
-      
-      recordset.close();
-      recordset = null;
+        if(recordset("start_date") != 'null') {
+			this.validFrom = new Date(recordset("start_date"))
+		};
+       // if(recordset("end_date") != null) this.validTo      = new Date(recordset("end_date"));
+		recordset.close();
+		recordset = null;
       }
       connection.close(); 
       connection = null;
@@ -67,7 +70,7 @@ function Content(id){
     catch(e){
       recordset = null;
       connection = null;
-      Response.Write("Error in Content constructor: Supplied ID: " + id + ", Error: "+e.message);
+      Response.Write("Error in Content constructor: Supplied ID: " + id + ", Error: "+e.message + '<br>');
     }
   }
   

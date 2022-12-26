@@ -7,7 +7,7 @@ var adminUtils = new Object();
 Build an abstract User object from submitted form data
 */
 adminUtils.buildUser = function(formObject){
-  Response.Write("<br>.-> Building user for update:<br>")
+  //Response.Write("<br>.-> Building user for update:<br>")
   var usr = new User()
   var isActive = false;
   usr.login = formObject("login");
@@ -16,13 +16,13 @@ adminUtils.buildUser = function(formObject){
   usr.email = formObject("email")
   usr.permissions = parseInt(formObject("permissions"))
   if(formObject("enabled") == "true"){ 
-    Response.Write("ACTIVE!<br>");
+   // Response.Write("ACTIVE!<br>");
     isActive = true;
   } 
   usr.active = isActive
   
-  Response.Write("-> Returning this user object:<br>");
-  showObject(usr);
+ // Response.Write("-> Returning this user object:<br>");
+ // showObject(usr);
   
   return(usr);
 }
@@ -67,7 +67,7 @@ Update a user record:
 */
 adminUtils.updateUser = function(user)
 {
-  Response.Write("begin update<br />");
+  //Response.Write("begin update<br />");
   try
   {
     //if(login.length > 0 && password.length>0 && fullname.length>0 && email.length>0){
@@ -83,7 +83,7 @@ adminUtils.updateUser = function(user)
           + ", active=" + activeVal 
           + " where id=" + user.id + ";";
           
-          Response.Write("<xmp>SQL: "+updateSQL+"</xmp>");
+     //     Response.Write("<xmp>SQL: "+updateSQL+"</xmp>");
       connection.execute(updateSQL);
       connection.close(); 
       connection = null;

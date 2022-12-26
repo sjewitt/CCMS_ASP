@@ -189,10 +189,6 @@ editUtils.removeViewtreeNode = function(node){
 
 editUtils.deleteInstance = function(contentInstance){
   try{
-    //showObject(contentInstance)  
-    
-    //Response.Write("deleting content " + contentInstance.contentId + ", version " + contentInstance.id + "<br>");
-    
     var connection  = Server.CreateObject("ADODB.Connection");
     connection.open(renderUtils.getConnectionString());
     var recordset   = Server.CreateObject("ADODB.Recordset"); 

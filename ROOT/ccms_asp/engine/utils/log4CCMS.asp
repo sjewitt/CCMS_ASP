@@ -111,6 +111,7 @@ log4CCMS.fatal = function(msg, src){
 Call the generic logger with the data:
 */
 function writeLog(msg,src,severity){
+	Response.Write("[log4CCMS] " + src + ": " + severity + ": " + msg);
 	logger("[log4CCMS] " + src + ": " + severity + ": " + msg);
 }
 %>

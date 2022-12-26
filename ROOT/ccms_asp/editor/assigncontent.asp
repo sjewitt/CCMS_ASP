@@ -7,7 +7,6 @@ var currentUser = userFactory.getCurrentUser();
 TODO: Modify to display title based on doaction:
 */
 if(currentUser){
-  Response.Write(Request.QueryString("action"))
   var msg = "Nothing done yet...";
   var refresher = "";
   var title = "";
@@ -18,7 +17,6 @@ if(currentUser){
       msg = "Mapping update failed!"
       if(ok){ 
         msg = "Mapping updated successfully.";
-        //refresher = "<script type=\"text/javascript\">window.opener.location.reload(true);</script>"
         refresher = editUtils.getOpenerReloadJavascript();
       }
     }
@@ -42,7 +40,6 @@ if(currentUser){
   <%=EDITOR_CSS%>
   <%=EDITOR_JAVASCRIPTS%>
   
- 
   <title>Replace content</title>
   </head>
   <body>

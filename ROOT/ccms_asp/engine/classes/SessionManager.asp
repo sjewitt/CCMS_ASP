@@ -21,6 +21,12 @@ function SessionManager(){
         this.sessionGUID = this.getGUID();
         //serialise it
       
+		//debug:
+		//Response.Write(this.sessionGUID + "<br />");
+		//Response.Write(userId + "<br />");
+		//Response.Write(userFactory.getSerialisedUserData(userId).replace(/'/g,"''") + "<br />");
+
+	  
         //drop a row into the database with parsed time as GUID, the user ID and an 'active' flag
         var connection    = Server.CreateObject("ADODB.Connection");
         connection.open(renderUtils.getConnectionString());
@@ -30,7 +36,7 @@ function SessionManager(){
           + this.sessionGUID + "',"
           + userId +",'"
           + userFactory.getSerialisedUserData(userId).replace(/'/g,"''") +"',1,GETDATE());";
-        //Response.Write(SQL);
+        Response.Write(SQL);
         connection.execute(SQL);
         connection.close(); 
         connection  = null;  

@@ -191,7 +191,7 @@ if(currentUser){
           <form name="updatecontent" action="<%=Request.ServerVariables("SCRIPT_NAME")%>?contentid=<%=contentId%>&amp;versionid=<%=Request.QueryString("versionid")%>" method="post">
           <input type="hidden" name="action" value="update" />
           <textarea name="content" rows="28" cols="72"><%=currInst.content%></textarea>
-          <input type="submit" name="submit" value="Save changes" />
+          <input type="submit" name="submit" value="Save changes" title="Save current changes into a new ATWORK instance" />
           </form>
         </td>
       </tr>

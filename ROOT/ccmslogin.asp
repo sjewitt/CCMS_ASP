@@ -22,7 +22,7 @@ if(Session("referrer") == null){
 if((new String(Request.Form("login"))) != "undefined" && (new String(Request.Form("password"))) != "undefined"){
   var user = userFactory.login(Request.Form("login"),Request.Form("password"));
   if(user){
-      Response.Redirect(Session("referrer"));
+    Response.Redirect(Session("referrer"));
   }
   else{
 %>

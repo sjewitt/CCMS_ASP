@@ -34,7 +34,7 @@ userFactory.login = function(login,password){
     recordset = null;
     connection.close();
     connection = null;
-    
+    Response.Write(user);
     return user;
     
   }

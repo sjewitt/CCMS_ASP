@@ -2,6 +2,7 @@
 //CORE API STUFF HERE:
 %>
 <!--#include virtual="/ccms_asp/config/config.asp"-->
+<!--#include virtual="/ccms_asp/engine/utils/logger.asp"-->
 <!--#include virtual="/ccms_asp/engine/renderUtils.asp"-->
 <!--#include virtual="/ccms_asp/engine/userFactory.asp"-->
 <!--#include virtual="/ccms_asp/engine/customisations.asp"-->

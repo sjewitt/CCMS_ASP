@@ -50,3 +50,9 @@ Add template option to the ADMIN section:
 21:13 27/07/2010
 ----------------
 Page/content properties display - include created date, num versions, last updated date etc.
+
+
+26/12/22
+--------
+ - instance ID increment is not correct - probably need to filter by contyent ID as well...
+ - Don't automatically create new instance
